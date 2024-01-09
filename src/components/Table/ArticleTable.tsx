@@ -64,7 +64,7 @@ const ArticleTable = () => {
             title: 'Title',
             dataIndex: 'title',
             key: 'title',
-            render: (text: any, render: any) => (
+            render: (_text: any, render: any) => (
                 <div>
                     {stringTrim(render?.title)}
                 </div>
@@ -74,7 +74,7 @@ const ArticleTable = () => {
             title: 'Body',
             dataIndex: 'body',
             key: 'body',
-            render: (text: any, render: any) => (
+            render: (_text: any, render: any) => (
                 <div>
                     {stringTrim(render?.body)}
                 </div>
@@ -84,7 +84,7 @@ const ArticleTable = () => {
             title: 'Author',
             dataIndex: 'author',
             key: 'author',
-            render: (text: any, render: any) => (
+            render: (_text: any, render: any) => (
                 <div>
                     {render?.user?.name}
                 </div>
@@ -94,7 +94,7 @@ const ArticleTable = () => {
             title: 'Action',
             dataIndex: 'action',
             key: 'action',
-            render: (text: any, render: any) => (
+            render: (_text: any, render: any) => (
                 <div>
                     <button className="text-lime-600 font-semibold" onClick={() => navigate(`/posts/${render?.id}`)}>View</button>
                 </div>
