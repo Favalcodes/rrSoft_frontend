@@ -116,7 +116,9 @@ const ArticleTable = () => {
                     <div className="content" />
                 </Spin>
             ) : (
-                <Table dataSource={searchItem?.length < 1 ? posts : searchData} columns={columns} />
+                <div className="w-full overflow-x-scroll">
+                    <Table dataSource={searchItem?.length < 1 ? posts : searchData} columns={columns} />
+                </div>
             )}
         </div>
     </>
