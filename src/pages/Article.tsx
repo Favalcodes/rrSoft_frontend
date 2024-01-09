@@ -6,8 +6,20 @@ import { toast } from "react-toastify";
 import { Spin } from "antd";
 import { Users, stringTrim } from "../helpers";
 
+interface Post {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+    user: {
+      id: number;
+      name: string;
+      contact: string;
+    };
+  }
+
 const Article = () => {
-    const [post, setPost] = useState({})
+    const [post, setPost] = useState<Post | null>(null)
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
